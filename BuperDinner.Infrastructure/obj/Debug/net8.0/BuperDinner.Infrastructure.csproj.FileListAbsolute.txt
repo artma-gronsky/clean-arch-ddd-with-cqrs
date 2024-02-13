@@ -15,3 +15,4 @@
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/bin/Debug/net8.0/BuperDinner.Domain.pdb
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.csproj.AssemblyReference.cache
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.csproj.CopyComplete
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.sourcelink.json

@@ -1,10 +1,10 @@
-using BuperDinner.Application.Services.Authentication;
-using BuperDinner.Application.Services.Authentication.Commands;
+using BuperDinner.Application.Authentication.Commands.Register;
+using BuperDinner.Application.Authentication.Queries;
 using BuperDinner.Application.Services.Authentication.Common;
-using BuperDinner.Application.Services.Authentication.Queries;
 using BuperDinner.Contracts.Authentications;
 using BuperDinner.Domain.Common.Errors;
 using ErrorOr;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuperDinner.Api.Controllers;
@@ -13,14 +13,13 @@ namespace BuperDinner.Api.Controllers;
 public class AuthenticationController : ApiController
 {
 
-    private readonly IAuthenticationCommandService _authenticationCommandService;
-    private readonly IAuthenticationQueryService _authenticationQueryService;
+    private readonly IMediator _mediator;
 
-    public AuthenticationController(IAuthenticationCommandService authenticationService, IAuthenticationQueryService authenticationQueryService)
+    public AuthenticationController(IMediator mediator)
     {
-        _authenticationCommandService = authenticationService;
-        _authenticationQueryService = authenticationQueryService;
+        _mediator = mediator;
     }
+
 
     // [HttpPost("register")]
     // public IActionResult Register(RegisterRequest reqiest)
@@ -56,9 +55,9 @@ public class AuthenticationController : ApiController
     // }
 
     [HttpPost("register")]
-    public IActionResult Register(RegisterRequest reqiest)
+    public async Task<IActionResult> Register(RegisterRequest reqiest)
     {
-        ErrorOr<AuthenticationResult> registerResult = _authenticationCommandService.Register(reqiest.FirstName, reqiest.LastName, reqiest.Email, reqiest.Password);
+        var registerCommand = new RegisterCommand(reqiest.FirstName, reqiest.LastName, reqiest.Email, reqiest.Password);
 
         // return registerResult.Match(
         //         authResult =>
@@ -68,8 +67,9 @@ public class AuthenticationController : ApiController
         //                     },
         //         _ => Problem(statusCode: StatusCodes.Status409Conflict, title: "User already exsists."));
 
-        return registerResult.MatchFirst(
-            authResult => Ok(MapAuthResult(authResult)),
+        var authResult = await _mediator.Send(registerCommand);
+        return authResult.MatchFirst(
+            result => Ok(MapAuthResult(result)),
             Problem);
     }
 
@@ -84,9 +84,10 @@ public class AuthenticationController : ApiController
     }
 
     [HttpPost("login")]
-    public IActionResult Login(LoginRequest reqiest)
+    public async Task<IActionResult> Login(LoginRequest reqiest)
     {
-        ErrorOr<AuthenticationResult> registerResult = _authenticationQueryService.Login(reqiest.Email, reqiest.Password);
+        var loginQuery = new LoginQuery(reqiest.Email, reqiest.Password);
+        ErrorOr<AuthenticationResult> registerResult = await _mediator.Send(loginQuery);
 
         if(registerResult.IsError && registerResult.FirstError == Errors.Authentication.InvalidCredentials){
             return Problem(statusCode: StatusCodes.Status401Unauthorized, title: registerResult.FirstError.Description);

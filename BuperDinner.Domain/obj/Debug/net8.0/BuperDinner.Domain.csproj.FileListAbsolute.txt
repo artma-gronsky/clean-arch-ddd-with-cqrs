@@ -10,3 +10,4 @@
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/BuperDinner.Domain.pdb
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/ref/BuperDinner.Domain.dll
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/BuperDinner.Domain.csproj.AssemblyReference.cache
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/BuperDinner.Domain.sourcelink.json

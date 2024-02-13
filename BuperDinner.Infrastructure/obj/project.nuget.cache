@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "iLJW9rp4aJ0CVT1uBa/dgnfO6AcJ8qNfjDAbDXzo1XTAQ9kkAMQ0GlEXd8g4OOp0JH2usG+uU3Gm1dr4dggieA==",
+  "dgSpecHash": "tjXla+rc6O7bGeO64M1ceL6y2R6C0AxURddQurOCl4MaNEORlhglGVX+sKy7YSODofIEX92pMIqF35a1wwRuNA==",
   "success": true,
   "projectFilePath": "/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/BuperDinner.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/artmadar/.nuget/packages/erroror/1.9.0/erroror.1.9.0.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/fluentresults/3.15.2/fluentresults.3.15.2.nupkg.sha512",
+    "/Users/artmadar/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
+    "/Users/artmadar/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/microsoft.extensions.configuration.binder/8.0.0/microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
+    "/Users/artmadar/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.1/microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",

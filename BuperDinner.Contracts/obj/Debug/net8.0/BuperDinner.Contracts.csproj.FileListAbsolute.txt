@@ -10,3 +10,4 @@
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Contracts/obj/Debug/net8.0/refint/BuperDinner.Contracts.dll
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Contracts/obj/Debug/net8.0/BuperDinner.Contracts.pdb
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Contracts/obj/Debug/net8.0/ref/BuperDinner.Contracts.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Contracts/obj/Debug/net8.0/BuperDinner.Contracts.sourcelink.json

@@ -13,3 +13,4 @@
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Application/obj/Debug/net8.0/refint/BuperDinner.Application.dll
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Application/obj/Debug/net8.0/BuperDinner.Application.pdb
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Application/obj/Debug/net8.0/ref/BuperDinner.Application.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Application/obj/Debug/net8.0/BuperDinner.Application.sourcelink.json
