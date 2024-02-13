@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/BuperDinner.Api.props" />
+</Project>

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>3938f331-9913-4775-8b22-10ceabc6f4ff</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BuperDinner.Contracts\BuperDinner.Contracts.csproj" />
+    <ProjectReference Include="..\BuperDinner.Application\BuperDinner.Application.csproj" />
+    <ProjectReference Include="..\BuperDinner.Infrastructure\BuperDinner.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

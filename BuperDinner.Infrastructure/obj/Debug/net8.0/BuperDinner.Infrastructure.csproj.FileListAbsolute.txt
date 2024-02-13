@@ -1,0 +1,17 @@
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/bin/Debug/net8.0/BuperDinner.Infrastructure.deps.json
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/bin/Debug/net8.0/BuperDinner.Infrastructure.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/bin/Debug/net8.0/BuperDinner.Infrastructure.pdb
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.AssemblyInfoInputs.cache
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.AssemblyInfo.cs
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/refint/BuperDinner.Infrastructure.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.pdb
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/ref/BuperDinner.Infrastructure.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/bin/Debug/net8.0/BuperDinner.Application.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/bin/Debug/net8.0/BuperDinner.Domain.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/bin/Debug/net8.0/BuperDinner.Application.pdb
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/bin/Debug/net8.0/BuperDinner.Domain.pdb
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.csproj.AssemblyReference.cache
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Infrastructure/obj/Debug/net8.0/BuperDinner.Infrastructure.csproj.CopyComplete

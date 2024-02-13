@@ -1,0 +1,12 @@
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/bin/Debug/net8.0/BuperDinner.Domain.deps.json
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/bin/Debug/net8.0/BuperDinner.Domain.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/bin/Debug/net8.0/BuperDinner.Domain.pdb
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/BuperDinner.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/BuperDinner.Domain.AssemblyInfoInputs.cache
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/BuperDinner.Domain.AssemblyInfo.cs
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/BuperDinner.Domain.csproj.CoreCompileInputs.cache
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/BuperDinner.Domain.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/refint/BuperDinner.Domain.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/BuperDinner.Domain.pdb
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/ref/BuperDinner.Domain.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/obj/Debug/net8.0/BuperDinner.Domain.csproj.AssemblyReference.cache

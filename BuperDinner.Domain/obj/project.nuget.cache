@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WP+B9DH4chCWRTmhZpqIG/4Y4MGOCL9QRAgdXsHgv8V/YyViyh2zlfdJj6kUfagsVGgBcWKtAOX0JKFUur/pxw==",
+  "success": true,
+  "projectFilePath": "/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Domain/BuperDinner.Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/artmadar/.nuget/packages/erroror/1.9.0/erroror.1.9.0.nupkg.sha512"
+  ],
+  "logs": []
+}
