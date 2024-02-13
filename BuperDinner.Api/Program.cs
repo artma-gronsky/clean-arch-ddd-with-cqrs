@@ -1,21 +1,14 @@
-using BuperDinner.Api.Common.Errors;
+using BuperDinner.Api;
 using BuperDinner.Application;
 using BuperDinner.Infrastructure;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
 {
     builder.Services
+    .AddPresentation()
     .AddApplication()
     .AddInfrastructure(builder.Configuration);
-    // builder.Services.AddControllers(options =>{
-    //     options.Filters.Add<ErrorHandlingFilterAttribute>();
-    // });
-
-     builder.Services.AddControllers();
-
-     builder.Services.AddSingleton<ProblemDetailsFactory, BuperDinnerProblemDetailsFactory>();
 }
 
 var app = builder.Build();

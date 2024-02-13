@@ -44,3 +44,6 @@
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Api/bin/Debug/net8.0/MediatR.dll
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Api/bin/Debug/net8.0/MediatR.Contracts.dll
 /Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Api/obj/Debug/net8.0/BuperDinner.Api.sourcelink.json
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Api/bin/Debug/net8.0/Mapster.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Api/bin/Debug/net8.0/Mapster.Core.dll
+/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Api/bin/Debug/net8.0/Mapster.DependencyInjection.dll

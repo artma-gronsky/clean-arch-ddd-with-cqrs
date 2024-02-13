@@ -1,6 +1,6 @@
 using BuperDinner.Application.Common.Interfaces.Authentication;
 using BuperDinner.Application.Common.Interfaces.Persistence;
-using BuperDinner.Application.Services.Authentication.Common;
+using BuperDinner.Application.Authentication.Common;
 using ErrorOr;
 using MediatR;
 using BuperDinner.Domain.Entities;
@@ -20,19 +20,19 @@ public class RegisterCommandHandler :
         _userRepository = userRepository;
     }
 
-    public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command, CancellationToken cancellationToken)
     {
          // Check if user already exist
-        if(_userRepository.GetUserByEmail(request.Email) is not null){
+        if(_userRepository.GetUserByEmail(command.Email) is not null){
             return Errors.User.DuplicateEmailError;
         }
 
         //Create user (generate unique Id)
         var user = new User(){
-            FirstName = request.FirstName,
-            LastName = request.LastName,
-            Email = request.Email,
-            Password = request.Password
+            FirstName = command.FirstName,
+            LastName = command.LastName,
+            Email = command.Email,
+            Password = command.Password
         };
 
         _userRepository.AddUser(user);

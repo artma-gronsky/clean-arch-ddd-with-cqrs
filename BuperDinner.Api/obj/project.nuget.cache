@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "VTfiKhu8BpkZQTUGWGbmAw/z/m5kzcIECFO0AjAMHe7XURe0vhJQdftM7BedInZYW4AcOnkq69ytAwiofp50Mg==",
+  "dgSpecHash": "rHKkcD/gd+2/FVCD0ySgUK/OkbiZQVu9cPTL7uZ8KGc1ahH6dv6mwwD11ObmJpEslcXj0fQjtkiMs6S88KUGhg==",
   "success": true,
   "projectFilePath": "/Users/artmadar/Documents/Education/BuperDinner/BuperDinner.Api/BuperDinner.Api.csproj",
   "expectedPackageFiles": [
     "/Users/artmadar/.nuget/packages/erroror/1.9.0/erroror.1.9.0.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/fluentresults/3.15.2/fluentresults.3.15.2.nupkg.sha512",
+    "/Users/artmadar/.nuget/packages/mapster/7.4.0/mapster.7.4.0.nupkg.sha512",
+    "/Users/artmadar/.nuget/packages/mapster.core/1.2.1/mapster.core.1.2.1.nupkg.sha512",
+    "/Users/artmadar/.nuget/packages/mapster.dependencyinjection/1.0.1/mapster.dependencyinjection.1.0.1.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/artmadar/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
