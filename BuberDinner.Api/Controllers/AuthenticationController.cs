@@ -7,9 +7,11 @@ using ErrorOr;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MapsterMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BuberDinner.Api.Controllers;
 
+[AllowAnonymous]
 [Route("auth")]
 public class AuthenticationController : ApiController
 {

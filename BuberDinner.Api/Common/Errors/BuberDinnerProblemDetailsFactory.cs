@@ -7,19 +7,14 @@ using Microsoft.Extensions.Options;
 using ErrorOr;
 
 namespace BuberDinner.Api.Common.Errors;
- 
-internal sealed class BuberDinnerProblemDetailsFactory : ProblemDetailsFactory
-{
-    private readonly Microsoft.AspNetCore.Mvc.ApiBehaviorOptions _options;
-    private readonly Action<ProblemDetailsContext>? _configure;
 
-    public BuberDinnerProblemDetailsFactory(
-        IOptions<ApiBehaviorOptions> options,
-        IOptions<ProblemDetailsOptions>? problemDetailsOptions = null)
-    {
-        _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
-        _configure = problemDetailsOptions?.Value?.CustomizeProblemDetails;
-    }
+internal sealed class BuberDinnerProblemDetailsFactory(
+    IOptions<ApiBehaviorOptions> options,
+    IOptions<ProblemDetailsOptions>? problemDetailsOptions = null)
+    : ProblemDetailsFactory
+{
+    private readonly ApiBehaviorOptions _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
+    private readonly Action<ProblemDetailsContext>? _configure = problemDetailsOptions?.Value?.CustomizeProblemDetails;
 
     public override ProblemDetails CreateProblemDetails(
         HttpContext httpContext,
@@ -94,8 +89,9 @@ internal sealed class BuberDinnerProblemDetailsFactory : ProblemDetailsFactory
         }
 
         var errors = httpContext?.Items[HttpContextItemKeys.Errors] as List<Error>;
-        
-        if (errors is not null){
+
+        if (errors is not null)
+        {
             problemDetails.Extensions.Add("errorCodes", errors.Select(e => e.Code));
         }
 

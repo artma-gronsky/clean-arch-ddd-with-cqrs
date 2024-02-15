@@ -20,16 +20,19 @@ public class RegisterCommandHandler :
         _userRepository = userRepository;
     }
 
-    public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command, CancellationToken cancellationToken)
+    public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command,
+        CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
-         // Check if user already exist
-        if(_userRepository.GetUserByEmail(command.Email) is not null){
+        // Check if user already exist
+        if (_userRepository.GetUserByEmail(command.Email) is not null)
+        {
             return Errors.User.DuplicateEmailError;
         }
 
         //Create user (generate unique Id)
-        var user = new User(){
+        var user = new User()
+        {
             FirstName = command.FirstName,
             LastName = command.LastName,
             Email = command.Email,
@@ -41,7 +44,6 @@ public class RegisterCommandHandler :
         // Create JWT token 
         var token = _jwtTokenGenerator.GenerateToken(user);
 
-         return new AuthenticationResult(user, token);
+        return new AuthenticationResult(user, token);
     }
 }
-

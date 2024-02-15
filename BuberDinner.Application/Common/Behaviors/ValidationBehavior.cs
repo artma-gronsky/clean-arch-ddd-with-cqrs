@@ -5,30 +5,24 @@ using MediatR;
 
 namespace BuberDinner.Application.Common.Behaviors;
 
-public class ValidationBehavior<TRequest, TResponse> 
-    : IPipelineBehavior<TRequest, TResponse> 
-        where TRequest: IRequest<TResponse>
-        where TResponse: IErrorOr
+public class ValidationBehavior<TRequest, TResponse>(IValidator<TRequest>? validator = null)
+    : IPipelineBehavior<TRequest, TResponse>
+    where TRequest : IRequest<TResponse>
+    where TResponse : IErrorOr
 {
-    private readonly IValidator<TRequest>? _validator;
-
-    public ValidationBehavior(IValidator<TRequest>? validator = null)
-    {
-        _validator = validator;
-    }
-
     public async Task<TResponse> Handle(
-            TRequest command,
-            RequestHandlerDelegate<TResponse> next,
-            CancellationToken cancellationToken)
+        TRequest command,
+        RequestHandlerDelegate<TResponse> next,
+        CancellationToken cancellationToken)
     {
-        if(_validator is null){
+        if (validator is null)
+        {
             var result = await next();
 
             return result;
         }
 
-        var validationResult = await _validator.ValidateAsync(command, cancellationToken);
+        var validationResult = await validator.ValidateAsync(command, cancellationToken);
 
         if (validationResult.IsValid)
         {
@@ -36,7 +30,7 @@ public class ValidationBehavior<TRequest, TResponse>
 
             return result;
         }
-        
+
         var errors = validationResult.Errors
             .ConvertAll(failure => Error.Validation(failure.PropertyName, failure.ErrorMessage));
 
