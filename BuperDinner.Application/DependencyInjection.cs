@@ -15,14 +15,13 @@ public static class DependencyInjection{
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly));
         
         // reguster behavior pipeline
-        services.AddScoped<IPipelineBehavior<
-            RegisterCommand, ErrorOr<AuthenticationResult>>, 
-            ValidateRegisterCommandBehavior>();
+        // services.AddScoped<IPipelineBehavior<
+        //     RegisterCommand, ErrorOr<AuthenticationResult>>, 
+        //     ValidationBehavior>();
+        services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
          // register validators
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-        // AddValidatorsFromAssembly or each validators one by one
-       // services.AddScoped<AbstractValidator<RegisterCommand>, RegisterCommandValidator>();    
 
         return services;
     }
