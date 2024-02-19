@@ -13,20 +13,32 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace BuberDinner.Infrastructure;
 
-public static class DependencyInjection{
-    public static IServiceCollection AddInfrastructure(this IServiceCollection service, ConfigurationManager configuration)
+public static class DependencyInjection
+{
+    public static IServiceCollection AddInfrastructure(this IServiceCollection service,
+        ConfigurationManager configuration)
     {
-        service.AddAuth(configuration);
+        service
+            .AddAuth(configuration)
+            .AddPersistence();
 
         service.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
-        service.AddScoped<IUserRepository, UserRepository>();
+
         return service;
+    }
 
-   }
+    private static IServiceCollection AddPersistence(this IServiceCollection service)
+    {
+        service.AddScoped<IUserRepository, UserRepository>();
+        service.AddScoped<IMenuRepository, MenuRepository>();
 
-    private static IServiceCollection AddAuth(this IServiceCollection service, ConfigurationManager configuration){
-        service.AddSingleton<IJwtTokenGenerator,JwtTokenGenerator>();
+        return service;
+    }
+
+    private static IServiceCollection AddAuth(this IServiceCollection service, ConfigurationManager configuration)
+    {
+        service.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
         var jwtSettings = new JwtSettings();
         configuration.Bind(nameof(JwtSettings), jwtSettings);

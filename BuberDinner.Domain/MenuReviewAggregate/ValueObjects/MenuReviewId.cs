@@ -1,19 +1,19 @@
 using BuberDinner.Domain.Common.Models;
 
-namespace BuberDinner.Domain.Menu.ValueObjects;
+namespace BuberDinner.Domain.MenuReviewAggregate.ValueObjects;
 
-public class MenuSectionId: ValueObject
+public class MenuReviewId : ValueObject
 {
     public Guid Value { get; }
 
-    private MenuSectionId(Guid value)
+    private MenuReviewId(Guid value)
     {
         Value = value;
     }
 
-    public static MenuSectionId CreateUnique()
+    public MenuReviewId CreateUnique()
     {
-        return new MenuSectionId(Guid.NewGuid());
+        return new(Guid.NewGuid());
     }
 
     public override IEnumerable<object> GetEqualityComponents()
