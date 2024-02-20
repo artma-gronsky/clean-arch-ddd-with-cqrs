@@ -1,5 +1,5 @@
 using BuberDinner.Application.Menus.Commands.CreateMenu;
-using BuberDinner.Contracts.Menu;
+using BuberDinner.Contracts.Menus;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

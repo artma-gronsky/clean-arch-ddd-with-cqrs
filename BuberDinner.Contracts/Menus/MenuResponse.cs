@@ -1,4 +1,4 @@
-namespace BuberDinner.Contracts.Menu;
+namespace BuberDinner.Contracts.Menus;
 
 public record MenuResponse(
     string Id,
