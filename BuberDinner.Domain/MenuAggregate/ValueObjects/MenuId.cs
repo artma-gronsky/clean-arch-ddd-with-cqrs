@@ -11,6 +11,11 @@ public class MenuId: ValueObject
         Value = value;
     }
 
+    public static MenuId Create(Guid value)
+    {
+        return new MenuId(value);
+    }
+
     public static MenuId CreateUnique()
     {
         return new MenuId(Guid.NewGuid());
