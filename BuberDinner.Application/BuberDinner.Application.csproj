@@ -20,4 +20,8 @@
     <PackageReference Include="oneof" Version="3.0.263" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dinners\" />
+  </ItemGroup>
+
 </Project>

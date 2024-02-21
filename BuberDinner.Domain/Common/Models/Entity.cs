@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace BuberDinner.Domain.Common.Models;
 
 public abstract class Entity<TId> : IEquatable<Entity<TId>>, IHasDomainEvents
@@ -54,7 +51,9 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>, IHasDomainEvents
 
 #pragma warning disable CS8618
 
-    protected Entity() { }
+    protected Entity()
+    {
+    }
 
 #pragma warning restore CS8618
 }
