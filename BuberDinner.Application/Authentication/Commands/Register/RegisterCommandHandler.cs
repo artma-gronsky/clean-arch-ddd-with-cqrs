@@ -2,7 +2,7 @@ using BuberDinner.Application.Authentication.Common;
 using BuberDinner.Application.Common.Interfaces.Authentication;
 using BuberDinner.Application.Common.Interfaces.Persistence;
 using BuberDinner.Domain.Common.Errors;
-using BuberDinner.Domain.UserAggregate;
+using BuberDinner.Domain.Users;
 using ErrorOr;
 using MediatR;
 
@@ -20,30 +20,27 @@ public class RegisterCommandHandler :
         _userRepository = userRepository;
     }
 
-    public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command,
-        CancellationToken cancellationToken)
+    public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command, CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
-        // Check if user already exist
+
         if (_userRepository.GetUserByEmail(command.Email) is not null)
         {
-            return Errors.User.DuplicateEmailError;
+            return Errors.User.DuplicateEmail;
         }
 
-        //Create user (generate unique Id)
-        var user = new User()
-        {
-            FirstName = command.FirstName,
-            LastName = command.LastName,
-            Email = command.Email,
-            Password = command.Password
-        };
+        var user = User.Create(
+            command.FirstName,
+            command.LastName,
+            command.Email,
+            command.Password);
 
         _userRepository.AddUser(user);
 
-        // Create JWT token 
         var token = _jwtTokenGenerator.GenerateToken(user);
 
-        return new AuthenticationResult(user, token);
+        return new AuthenticationResult(
+            user,
+            token);
     }
 }

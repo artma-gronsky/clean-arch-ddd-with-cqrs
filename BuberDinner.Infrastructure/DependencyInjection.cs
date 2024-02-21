@@ -32,7 +32,7 @@ public static class DependencyInjection
 
     private static IServiceCollection AddPersistence(this IServiceCollection service)
     {
-        service.AddDbContext<BuberDinnerDbContext>(options => options.UseSqlServer());
+        service.AddDbContext<BuberDinnerDbContext>(options => options.UseSqlServer("Server=localhost;Database=BuperDinner;User Id=sa;Password=MyPass@word;Encrypt=false;"));
 
         service.AddScoped<IUserRepository, UserRepository>();
         service.AddScoped<IMenuRepository, MenuRepository>();

@@ -1,7 +1,7 @@
-using BuberDinner.Domain.HostAggregate.ValueObjects;
-using BuberDinner.Domain.MenuAggregate;
-using BuberDinner.Domain.MenuAggregate.Entities;
-using BuberDinner.Domain.MenuAggregate.ValueObjects;
+using BuberDinner.Domain.Hosts.ValueObjects;
+using BuberDinner.Domain.Menus;
+using BuberDinner.Domain.Menus.Entities;
+using BuberDinner.Domain.Menus.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -88,7 +88,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
                     .HasMaxLength(100);
             });
 
-            sb.Navigation(s => s.Items).Metadata.SetField("_items");
+            sb.Navigation(s => s.Items).Metadata.SetField("_menuItems");
             sb.Navigation(s => s.Items).Metadata.SetPropertyAccessMode(PropertyAccessMode.Field);
         });
 
@@ -108,8 +108,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
 
             dib.Property(d => d.Value)
                 .HasColumnName("DinnerId")
-                .ValueGeneratedNever()
-                ;
+                .ValueGeneratedNever();
         });
 
         builder.Metadata.FindNavigation(nameof(Menu.DinnerIds))!
